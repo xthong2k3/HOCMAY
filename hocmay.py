@@ -88,7 +88,7 @@ print(results.head(20))
 # Chuyển numpy array thành DataFrame
 y_pred_df = pd.DataFrame(y_pred, columns=['AQI_DuDoan'])
 # Chuyển Chỉ số AQI thực tế và dự đoán thành các nhãn phân loại
-# Ví dụ: Chia thành 3 nhóm: "Tốt", "Trung bình", "Xấu"
+# Chia thành 4 nhóm: "Tốt", "Trung bình", "Kém","Xấu"
 def convert_to_category(aqi):
     if aqi <= 50:
         return "Tốt"
@@ -108,3 +108,4 @@ accuracy = accuracy_score(y_true_categories, y_pred_categories)
 
 # In kết quả độ chính xác
 print(f"Độ chính xác: {accuracy}")
+
